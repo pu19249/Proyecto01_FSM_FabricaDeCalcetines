@@ -7,7 +7,7 @@
 //Flip flop asincrono
 module FFD(input wire clk, reset, D, output reg Q);
     always @(posedge clk or posedge reset) begin
-        if(reset==1'b1)
+        if(reset)
             Q <= 1'b0; //si el reset esta en uno entonces la salida se resetea
         else
             Q <= D; //de lo contrario la salida toma el valor de la entrada
